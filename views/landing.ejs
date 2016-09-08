@@ -1,0 +1,138 @@
+<!-- <% include /partials/header %>
+
+<div class="container">
+	<div class="row text-center">
+		<h1>Landing Page</h1>
+		<p>Welcome to Books2Read</p>
+		<a href="/books">Go to the Books Page</a><br>
+		<a href="/books/new">Add New Book</a>	
+	</div>
+</div>
+
+<% include /partials/footer %> -->
+<% include /partials/header %>
+
+
+<div class="homepage-hero-module">
+	<div class="video-container">
+		<div class="filter"></div>
+			<video autoplay loop class="fillWidth">
+				<source src="/assets/Slide-Show.mp4" type="video/mp4">
+				<source src="/assets/Slide-Show.webm" type="video/webm">
+			</video>
+			<div class="overlay">
+				<h1 class="homepage-video-text">Welcome to Books2Read</h1>
+			</div>	
+	</div>
+</div>
+
+<br><br>
+<div class="container">
+	<div class="row">
+		<h2><span><i>Why</i></span> I created Books2Read....</h2>
+		<div class="col-md-12">
+			<div class="background">
+				<p>
+					The reason behind this application is because I wanted a way to keep track of the books I've read throughout my life.
+					Instead of buying books, I go to the library and read whatever I can.  The only bad thing about that is having to return the books.
+					Since you have to return the books you can never go back and read those important points from the book.
+				</p>
+			</div>
+			<br>
+		<h2><span>What</span> I want to accomplish with this application....</h2>
+			<p>
+				I want to accomplish a way for people to list the books they've read along with a short summary and important points so they can always
+				come back and reference them whenever they need too.  This way you can just look over the notes you've taken instead of having to 
+				go back to the book
+			</p>
+		</div>
+	</div>
+
+	<br>
+
+
+	<h2 class="text-center" style="margin-bottom: 5%;"><u>Most Recent Added Books</u></h2>
+	<div class="row">
+		<% books.forEach(function(books){ %>
+			<div class="col-md-4 col-sm-6">
+				<div class="thumbnail">
+					<img src="<%= books.image %>" style="width:150px; height:195px;">
+					<div class="caption text-center">
+						<h4><%= books.title %></h4>
+						<h5>Author: <%= books.author %></h5>
+					</div> 
+					<p class="text-center"><a href="/books/<%= books._id %>" class="btn btn-primary" style="width: 45%;">More Info</a></p>
+				</div>
+			</div>
+		<% }) %>		
+	</div>
+
+	<div class="row">
+        <div class="col-md-12" data-wow-delay="0.5s">
+        	<h2 class="text-center"><u>Quotes</u></h2>
+            <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                <!-- Bottom Carousel Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="/assets/peterdrucker.jpg" alt="">
+                    </li>
+                    <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="/assets/williamclark.jpg" alt="">
+                    </li>
+                    <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="/assets/charles.jpg" alt="">
+                    </li>
+                </ol>
+
+                <!-- Carousel Slides / Quotes -->
+                <div class="carousel-inner text-center">
+
+                    <!-- Quote 1 -->
+                    <div class="item active">
+                        <blockquote>
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-offset-2">
+
+                                    <p>
+                                    	“This defines entrepreneur and entrepreneurship - the entrepreneur always searches for change, responds to it, and exploits it as an opportunity.”
+                                    </p>
+                                    <small>Peter Drucker</small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <!-- Quote 2 -->
+                    <div class="item">
+                        <blockquote>
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-offset-2">
+
+                                    <p>
+                                    	“A great book should leave you with many experiences, and slightly exhausted at the end. You live several lives while reading.” 
+                                    </p>
+                                    <small>William Styron</small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <!-- Quote 3 -->
+                    <div class="item">
+                        <blockquote>
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-offset-2">
+
+                                    <p>
+                                    	“Books are the quietest and most constant of friends; they are the most accessible and wisest of counselors, and the most patient of teachers.” 
+                                    </p>
+                                    <small>Charles William Eliot</small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- Carousel Buttons Next/Prev -->
+                <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>	
+</div>
+<% include /partials/footer %>

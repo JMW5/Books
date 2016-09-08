@@ -1,0 +1,215 @@
+body {
+    background-image: url("../assets/ticks_@2X.png");
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Oxygen', sans-serif !important;
+    font-weight: bold;
+}
+
+h4,
+h5 {
+   font-family: 'PT Sans Narrow', sans-serif;
+   font-size: 19px; 
+}
+
+p {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 23px;
+    line-height: 150%;
+}
+
+
+/*===============
+Video Home Page
+================= */
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+
+.homepage-video-text {
+    font-family: 'Oxygen', sans-serif !important;
+    position: absolute; 
+    color: #FFF; 
+    text-align: center;
+    font-size: 90px;
+    z-index: 0;
+    left: 0;
+    line-height: 200px;
+    margin: auto;
+    margin-top: -100px;
+    top: 50%;
+    width: 100%;
+}
+
+
+/*===============
+NavBar
+================= */
+
+.navbar {
+    margin: 0px !important;
+}
+
+.navbar-default {
+    background-color: transparent !important;
+    border: none;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.navbar-right {
+    margin-right: 0px !important;
+}
+
+.overlay {
+    position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 10;
+     background-color: rgba(0,0,0,0.7);
+}
+
+.thumbnail {
+    background-color: transparent;
+}
+
+.caption {
+    text-align: center;
+}
+
+
+#logout {
+    width: 100%;
+    height: 50px;
+    background-color: blue;
+    position: fixed;
+    top: 0px;
+    margin: 0px;
+    color: red;
+}
+
+#logoutBox {
+    height: 50px;
+}
+
+.alert {
+    width: 45%;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+    float: right;
+}
+
+
+
+
+/* Carousel */
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+    /* Control buttons  */
+    /* Previous button  */
+    /* Next button  */
+    /* Changes the position of the indicators */
+    /* Changes the color of the indicators */
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-control.left {
+    left: -10px;
+}
+#quote-carousel .carousel-control.right {
+    right: -10px;
+}
+#quote-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border: 4px solid #CCC;
+    border-radius: 50px;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+#quote-carousel .carousel-indicators .active {
+    background: #333333;
+    width: 128px;
+    height: 128px;
+    border-radius: 100px;
+    border-color: #f33;
+    opacity: 1;
+    overflow: hidden;
+}
+.carousel-inner {
+    min-height: 300px;
+}
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+.item blockquote p:before {
+    content: open-quote;
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+
+

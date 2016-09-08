@@ -1,0 +1,26 @@
+<% include /partials/header %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center" style="margin-top: 10%;">  
+			<h3><%= books.title %></h3>
+			<h4>By: <%= books.author %></h4>
+			<img src="<%= books.image %>" style="width: 350px; height: 500px">
+			<p><i>Created By:</i><%= books.reader.username %></p>
+			
+			<p><%= books.description %></p>
+
+			<% if(currentUser && books.reader.id.equals(currentUser._id)){ %>
+				<div>
+					<form action="/books/<%= books._id %>?_method=DELETE" method="POST">
+						<a href="/books/<%= books._id %>/edit" class="btn btn-warning">Edit</a>
+						<button class="btn btn-danger">Delete</button>
+					</form>
+				</div>
+			<% } %>
+		</div>
+	</div>
+	<br><br>
+</div>
+
+<% include /partials/footer %>
