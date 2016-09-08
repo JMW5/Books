@@ -59,6 +59,6 @@ app.use(indexRoute);
 app.use(bookRoute);
 
 
-app.listen(process.env.PORT, function(){
+app.listen(process.env.PORT || 3000, function(){
 	console.log("Books2Read has started");
 });
